@@ -1,15 +1,25 @@
 import * as React from 'react';
 import uuid from 'uuid/v3';
-// import Cookie from 'js-cookie';
 
-export const Upload: React.SFC = (): JSX.Element => {
+export const Upload: React.FunctionComponent = (): JSX.Element => {
+  const [colorFile, setFile] = React.useState({});
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void  => {
+    const file = e.currentTarget.files[0]
+    const reader: FileReader = new FileReader();
+    reader.onloadend = () => {
+      console.log(reader.result);
+    }
+    setFile(file);
+    reader.readAsText(file);
+  }
   return (
     <>
       <input
-        accept=".json"
+        accept=".json, application/json, text/plain"
         id={uuid('upload', '1b671a64-40d5-491e-99b0-da01ff1f3341')}
+        multiple={false}
+        onChange={handleChange}
         type="file"
-        multiple
         />
     </>
   )

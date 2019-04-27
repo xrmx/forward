@@ -3,6 +3,7 @@ import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import * as React from 'react';
 import * as Component from '../components';
+import * as Container from '../container';
 import * as Type from '../types';
 import { ColorContext, ColorCtxProvider } from '../color-context';
 
@@ -56,6 +57,7 @@ export default class extends React.Component {
                     tag={Type.CopyTag.p}>
                     The design needs to meet color contrast requirements for people with vision or color perception deficiencies.
                   </Component.Copy>
+                  <Container.Upload />
                   <Component.Link href="/list">Use default palette ></Component.Link>
                 </Component.Space>
               </Component.LayoutItem>
