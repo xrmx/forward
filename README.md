@@ -1,7 +1,9 @@
 # Forward
 
-> Check for automated AA and AAA conformance color contrast according to the WCAG
->
+> AA and AAA conformance color contrast checker according to the WCAG
+
+<img alt="screenshot" src="https://raw.githubusercontent.com/xrmx/forward/addscreenshot/static/screenshot.png" />
+
 
 ## Develop
 
